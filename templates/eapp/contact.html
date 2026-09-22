@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+{%extends 'eapp/home.html'%}
+
+{%block body_block%}
+{%load static%}
+
+{% load static %}
+
+
+<div class="contact-page">
+
+
+    <div class="contact-header">
+
+        <h1>Contact Us</h1>
+
+        <p>
+            Reach NBKR Institute of Science and Technology
+            for admissions, academic support, student
+            verifications, and department-wise academic
+            coordination.
+        </p>
+
+    </div>
+
+
+
+    <div class="contact-content">
+
+
+        <div class="contact-form-card">
+
+            <h2>Get in Touch</h2>
+
+            <form method="POST">
+
+                {% csrf_token %}
+
+                <div class="form-group">
+
+                    <label>Full Name</label>
+
+                    <input
+                        type="text"
+                        name="name"
+                        placeholder="Enter your name"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Contact Number</label>
+
+                    <input
+                        type="text"
+                        name="contact"
+                        placeholder="Enter contact number"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Email</label>
+
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="Enter email address"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Message</label>
+
+                    <textarea
+                        name="message"
+                        placeholder="Enter your message"
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <button type="submit">
+                    Submit
+                </button>
+
+                
+            </form>
+
+        </div>
+
+        <div class="address-card">
+
+            <h2>Road Map</h2>
+
+            <h3>
+                N.B.K.R. Institute of Science and Technology
+            </h3>
+
+            <p>
+                Vidyanagar, Kota (Mandal)<br>
+                Tirupati District<br>
+                Andhra Pradesh, India<br>
+                Pincode: 524413
+            </p>
+
+            <div class="map-box">
+
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1935.418579740494!2d80.020495!3d14.027665!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4ce293af3006af%3A0x85554323d0d207e8!2sNBKR%20Institute%20Of%20Science%20and%20Technology!5e0!3m2!1sen!2sus!4v1786624910414!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+
+                <span>Map</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+</div>
+
+{%endblock%}

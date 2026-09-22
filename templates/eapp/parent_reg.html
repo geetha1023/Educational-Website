@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+{%extends 'eapp/home.html'%}
+
+{%block body_block%}
+{%load static%}
+
+
+{% load static %}
+
+
+    <div class="parent-registration">
+
+        <div class="registration-card">
+
+            <h1 class="registration-title">
+                Parent Registration
+            </h1>
+
+            <p class="registration-subtitle">
+                Please enter the details below
+            </p>
+
+            <form method="POST" class="registration-form">
+
+                {% csrf_token %}
+
+                <div class="form-field">
+                    <label for="parent_name">Parent Name</label>
+                    <input
+                        type="text"
+                        id="parent_name"
+                        name="parent_name"
+                        placeholder="Enter parent name"
+                        required
+                    >
+                </div>
+
+                <div class="form-field">
+                    <label for="contact">Contact Number</label>
+                    <input
+                        type="text"
+                        id="contact"
+                        name="contact"
+                        placeholder="Enter contact number"
+                        required
+                    >
+                </div>
+
+                <div class="form-field">
+                    <label for="email">Email</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter email address"
+                        required
+                    >
+                </div>
+
+                <div class="form-field">
+                    <label for="student_name">Student Name</label>
+                    <input
+                        type="text"
+                        id="student_name"
+                        name="student_name"
+                        placeholder="Enter student name"
+                        required
+                    >
+                </div>
+
+                <div class="form-field">
+                    <label for="address">Address</label>
+                    <textarea
+                        id="address"
+                        name="address"
+                        placeholder="Enter address"
+                        required
+                    ></textarea>
+                </div>
+
+                <button type="submit" class="register-button">
+                    Register
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+
+{%endblock%}

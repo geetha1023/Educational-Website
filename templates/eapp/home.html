@@ -1,0 +1,152 @@
+{% load static%}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>home page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{%static "css/style.css"%}"/>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-success">
+  <div class="container">
+
+    <a class="navbar-brand fw-bold" href="/home/">
+      <img class="logo" src="{%static 'images/logo.jpg'%}"/>
+    <span class="fw-bold fs-4 mt-3 ms-2">NBKRIST</span>
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarNavDropdown">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+
+      <ul class="navbar-nav ms-auto">
+
+        <li class="nav-item">
+          <a class="nav-link " href="/home/">HOME</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="/about/">ABOUT US</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button"
+             data-bs-toggle="dropdown">
+            DEPARTMENTS
+          </a>
+
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/cse/">CSE</a></li>
+            <li><a class="dropdown-item" href="/ece/">ECE</a></li>
+            <li><a class="dropdown-item" href="/eee/">EEE</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button"
+             data-bs-toggle="dropdown">
+            GALLERY
+          </a>
+
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/photos/">Photos</a></li>
+            <li><a class="dropdown-item" href="/videos/">Videos</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="/news/">LATEST NEWS</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="/parent/">PARENT REGISTRSTION</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="/contact/">CONTACT US</a>
+        </li>
+
+      </ul>
+
+    </div>
+  </div>
+</nav> 
+
+  {%block body_block%}
+<center>
+  <img class="main_pic" src="{%static 'images/main pic.png'%}"/>
+  <p class="tag1">......Admissions are Open-2026.......</p>
+  <h1><b>Welcome To NBKRIST</b></h1>
+  <p>
+    <b>NBKR Institute of Science & Technology, established in 1979, is an Autonomous Institute affiliated to JNTUA Anantapuramu. This Institute is reaccredited by NAAC (UGC) for the third cycle with “A” grade.
+     All B.Tech courses are accredited by the National Board of Accreditation (NBA) under Tier 1. UGC awarded the status of “College with Potential for Excellence (CPE)” to our Institute.
+  </p>
+  <p>
+   The Institute has an R&D Cell and recognised research centres of JNTUA Anantapuramu offering Ph.D. programmes.Training programmes through Industry-Institute interactions are organized on the latest trends and innovations in technology by eminent industry experts, entrepreneurs, HR managers, and alumni through the Training & Placement Cell.
+   The Institute is located on a wide campus covered in beautiful greenery and includes academic blocks, boys and girls hostels, open air auditorium, sports complex, staff quarters, and more. The Institute focuses on skill and professional development of the graduates through student-run clubs and technical associations. Professional chapters like IEEE, ISTE, IETE, and CSI exist in our Institute.
+  </p></b>
+  <h1>Why choose us</h1>
+   <div class="fd">
+            <img class="divimg" src="{%static "images/image1.jpeg"%}"/>
+            <p>
+               <b>Hostel Life</b><br>
+              Comfortable residential support with structured discipline, safety, and a student-friendly atmosphere.
+            </p>
+              <a href="/contact/"><button>Register</button></a>
+    
+             </div>
+
+         <div class="sd">
+            <img class="divimg" src="{%static "images/image2.jpg"%}"/>
+            <P>
+              <b>Campus Wi-Fi</b><br>
+              
+              Reliable internet connectivity that supports digital learning, online resources, and student productivity.
+                </P>
+                  <a href="/contact/"><button>Register</button></a>
+         </div>
+
+         <div class="thd">
+            <img class="divimg" src="{%static "images/image3.webp"%}"/>
+            <p>
+                <b>Central Library</b><br>
+             Rich learning resources, digital access, journals, and a peaceful study atmosphere for serious learners.
+            </p>
+              <a href="/contact/"><button>Register</button></a>
+         </div>
+          <div class="ffd">
+            <img class="divimg" src="{%static "images/image4.jpg"%}"/>
+            <p>
+               <b>NCC & Service</b><br>
+Opportunities that build discipline, leadership, patriotism, and social responsibility among students.
+            </p>
+              <a href="/contact/"><button>Register</button></a>
+         </div>
+         <div class="admin">
+         <h2 >Looking for Admission???</h2>
+        <p ><b>
+Thank you for considering NBKR Institute of Science & Technology for your engineering education.
+ Choosing the right college is an important milestone, and we are delighted to invite you to visit our campus and experience our academic environment first-hand.
+        </p></b>
+        
+         <a href="/contact/"><button>Register</button></a>
+        </div>
+        
+          <h3>....Parents Feedback....</h3>
+          <iframe width="300px" height="200px" src="https://www.youtube.com/embed/WDSJB4r7ROY" title="NBKR Institute Of Science and Technology | Kota Mandal, Vidyanagar,| ONE MAN STUDIO |" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <iframe width="300px" height="200px" src="https://www.youtube.com/embed/NQoccdWtVX0" title="&quot;Exposed: The Brutally Honest Truth About NBKR Vidyanagar College!&quot;|&quot;Unveiling NBKR Vidyanagar" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <iframe width="300px" height="200px" src="https://www.youtube.com/embed/3ei40FPuwmo" title="NBKR CSE Engg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  
+
+    {%endblock%} 
+
+   </center> 
+   
+     
+      
+    </body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+{%extends 'eapp/home.html'%}
+
+{%block body_block%}
+{%load static%}
+
+{% load static %}
+
+
+
+    <div class="admin-page">
+
+        <div class="admin-header">
+            <h1>Parent Registration Details</h1>
+            <p>Registered Parent and Student Information</p>
+        </div>
+
+        <div class="table-card">
+
+            <table class="parent-table">
+
+                <thead>
+                    <tr>
+                        <th>Parent Name</th>
+                        <th>Contact</th>
+                        <th>Email</th>
+                        <th>Student Name</th>
+                        <th>Address</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    {% for parent in parents %}
+
+                    <tr>
+                        <td>{{ parent.parent_name }}</td>
+                        <td>{{ parent.contact }}</td>
+                        <td>{{ parent.email }}</td>
+                        <td>{{ parent.student_name }}</td>
+                        <td>{{ parent.address }}</td>
+                    </tr>
+
+                    {% empty %}
+
+                    <tr>
+                        <td colspan="5" class="no-data">
+                            No parent registrations found.
+                        </td>
+                    </tr>
+
+                    {% endfor %}
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+        <div class="back-section">
+            <a href="{% url 'parent_register' %}" class="back-button">
+                ← Back to Registration
+            </a>
+        </div>
+
+    </div>
+    <div class="admin-page">
+
+        <div class="admin-header">
+
+<h1>Contact Details</h1>
+<p>Student Contact Details</p>
+        </div>
+
+<div class="table-card">
+
+    <table class="parent-table">
+
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Contact</th>
+                <th>Email</th>
+                <th>Message</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            {% for contact in contacts %}
+
+            <tr>
+                <td>{{ contact.name }}</td>
+                <td>{{ contact.contact }}</td>
+                <td>{{ contact.email }}</td>
+                <td>{{ contact.message }}</td>
+            </tr>
+
+            {% empty %}
+
+            <tr>
+                <td colspan="4">
+                    No contact submissions.
+                </td>
+            </tr>
+
+            {% endfor %}
+
+        </tbody>
+
+    </table>
+
+</div>
+
+<a href="{% url 'contact' %}" class="back-button">
+    ← Back to Contact
+</a>
+    </div>
+
+
+
+{%endblock%}
